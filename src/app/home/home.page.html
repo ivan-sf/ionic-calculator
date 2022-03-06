@@ -1,20 +1,42 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<div class="content">
+  <div class="result">
+     <!-- {{calculate}} -->
+     <span class="n">{{n2}}</span>
+     <span class="n">{{n3}}</span>
   </div>
-</ion-content>
+  <div class="reset" (click)="calculator('reset')">C</div>
+
+  <div class="operation">
+    <div class="circle">
+     <div class="numbers">
+        <span class="char" (click)="calculator(0)">0</span>
+        <span class="char" (click)="calculator(1)">1</span>
+        <span class="char" (click)="calculator(2)">2</span>
+        <span class="char" (click)="calculator(3)">3</span>
+        <span class="char" (click)="calculator(4)">4</span>
+     </div>
+    </div>
+    <div class="circle">
+      <div class="numbers">
+        <span class="char" (click)="calculator(5)">5</span>
+        <span class="char" (click)="calculator(6)">6</span>
+        <span class="char" (click)="calculator(7)">7</span>
+        <span class="char" (click)="calculator(8)">8</span>
+        <span class="char" (click)="calculator(9)">9</span>
+     </div>
+    </div>
+    <div class="circle">
+      <div class="operators">
+        <span class="char" (click)="calculator('+')">+</span>
+        <span class="char" (click)="calculator('-')">-</span>
+        <span class="char" (click)="calculator('*')">x</span>
+        <span class="char" (click)="calculator('/')">/</span>
+     </div>
+    </div>
+    <div class="circle">
+      <div class="equal">
+        <span class="char" (click)="calculator('=')">=</span>
+     </div>
+    </div>
+  </div>
+</div>
